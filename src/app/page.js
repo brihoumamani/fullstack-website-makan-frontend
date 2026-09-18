@@ -7,8 +7,9 @@ import PropertyCard from '@/components/PropertyCard';
 import MapBanner from '@/components/MapBanner';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import SearchResultsSection from '@/components/SearchResultsSection';
+import { getApiBase } from '@/utils/apiConfig';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const API_BASE = getApiBase();
 
 // Initial Figma Mock Data
 const figmaSalesProperties = [

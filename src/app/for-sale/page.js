@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import PropertyCard from '@/components/PropertyCard';
+import { getApiBase } from '@/utils/apiConfig';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const API_BASE = getApiBase();
 
 // Sample mock properties localized to Algeria
 const algerianLocations = [

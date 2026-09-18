@@ -3,8 +3,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import PropertyMap from '@/components/PropertyMap';
+import { getApiBase } from '@/utils/apiConfig';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const API_BASE = getApiBase();
 
 // Fallback Algerian properties with accurate GeoJSON coordinates
 const fallbackProperties = [

@@ -1,10 +1,11 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { getApiBase } from '@/utils/apiConfig';
 
 const AuthContext = createContext(null);
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const API_BASE = getApiBase();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);

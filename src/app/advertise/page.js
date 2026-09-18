@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ImageUploadDropzone from '@/components/ImageUploadDropzone';
+import { getApiBase } from '@/utils/apiConfig';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const API_BASE = getApiBase();
 
 export default function DynamicAdvertiseWizard() {
   // Wizard Step State: 1 = Form (Pen), 2 = Preview (Eye), 3 = Contact (Phone), 4 = Finish (Checkmark)
