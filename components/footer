@@ -1,0 +1,15 @@
+export default function Footer() {
+  return (
+    <footer className="bg-dark text-light py-8 mt-auto">
+      <div className="max-w-7xl mx-auto px-4 text-center sm:text-left sm:flex sm:justify-between">
+        <div>
+          <h2 className="text-xl font-bold mb-2">MAKAN</h2>
+          <p className="text-sm text-gray-400">Premium Real Estate in Algeria</p>
+        </div>
+        <div className="mt-4 sm:mt-0 text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} MAKAN. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Global Base Theme Variables & Smooth Transitions */
+:root {
+  --bg-primary: #F0F2F5;   /* Soothing, eye-friendly neutral canvas background */
+  --bg-surface: #FFFFFF;   /* Crisp, elevated pure white cards and containers */
+  --text-main: #0F172A;    /* Deep dark slate for sharp readability */
+  --text-muted: #475569;   /* Slate gray for secondary text */
+  --border-subtle: #E2E8F0;/* Refined, clean border for structural depth */
+}
+
+.dark,
+[data-theme="dark"],
+html.dark {
+  color-scheme: dark;
+  --bg-primary: #07080B;   /* Deep luxury midnight black canvas */
+  --bg-surface: #0E1016;   /* Rich pitch dark surface card */
+  --text-main: #F8FAFC;    /* Ultra crisp white typography */
+  --text-muted: #94A3B8;   /* Muted cool slate text */
+  --border-subtle: #1C1F28;/* Clean subtle dark border */
+}
+
+html, body {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Light Theme: Comfortable, Low-Glare #F0F2F5 Canvas */
+body {
+  background-color: #F0F2F5;
+  color: #0F172A;
+}
+
+/* Main background canvas wrappers in Light Mode */
+html:not(.dark) body,
+html:not(.dark) main,
+html:not(.dark) .bg-\[\#FAFAFA\],
+html:not(.dark) .bg-gray-50 {
+  background-color: #F0F2F5 !important;
+}
+
+/* Crisp White Elevated Cards, Navbars & Modals in Light Mode */
+html:not(.dark) .bg-white {
+  background-color: #FFFFFF !important;
+}
+
+/* Inputs, Textareas & Selects in Light Mode */
+html:not(.dark) input,
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  border-color: #CBD5E1;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #94A3B8;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) select:focus,
+html:not(.dark) textarea:focus {
+  border-color: #7C3AED;
+  outline: none;
+}
+
+/* Strong typography contrast in Light Mode */
+html:not(.dark) .text-gray-900,
+html:not(.dark) .text-gray-800 {
+  color: #0F172A !important;
+}
+
+html:not(.dark) .text-gray-700,
+html:not(.dark) .text-gray-600 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-gray-500 {
+  color: #64748B !important;
+}
+
+html:not(.dark) .text-gray-400 {
+  color: #94A3B8 !important;
+}
+
+/* Defined borders in Light Mode */
+html:not(.dark) .border-gray-100,
+html:not(.dark) .border-gray-150 {
+  border-color: #E2E8F0 !important;
+}
+
+html:not(.dark) .border-gray-200 {
+  border-color: #E2E8F0 !important;
+}
+
+html:not(.dark) .border-gray-300 {
+  border-color: #CBD5E1 !important;
+}
+
+/* Navbar in Light Mode */
+html:not(.dark) nav {
+  background-color: #FFFFFF !important;
+  border-bottom-color: #E2E8F0 !important;
+}
+
+/* ========================================================================= */
+/* ULTRA-DARK THEME OVERRIDES (Deep Midnight Black / OLED Dark Aesthetic)   */
+/* ========================================================================= */
+html.dark body,
+body.dark,
+[data-theme="dark"] body {
+  background-color: #07080B !important;
+  color: #F8FAFC !important;
+}
+
+/* Background of main wrappers & canvas across entire site */
+html.dark main,
+html.dark .bg-\[\#FAFAFA\],
+html.dark .bg-gray-50,
+html.dark .bg-\[\#EDEBF5\],
+html.dark .bg-\[\#CACACC\],
+html.dark .dark\:bg-\[\#0f172a\],
+html.dark .dark\:bg-slate-900,
+html.dark .dark\:bg-\[\#0f172a\]\/60 {
+  background-color: #07080B !important;
+}
+
+/* Deep dark surface containers & cards (Navbar, Cards, Modals, Search Card) */
+html.dark .bg-white,
+html.dark .dark\:bg-\[\#1e293b\],
+html.dark .dark\:bg-slate-800 {
+  background-color: #0E1016 !important;
+  color: #F8FAFC;
+}
+
+/* Navbar in ultra-dark mode */
+html.dark nav {
+  background-color: #090A0E !important;
+  border-color: #171922 !important;
+}
+
+/* Popovers, Dropdowns & Elevated Floating Elements in dark mode */
+html.dark .dark\:bg-\[\#1e293b\].shadow-2xl,
+html.dark .dark\:bg-\[\#1e293b\].shadow-xl,
+html.dark .shadow-2xl,
+html.dark .shadow-xl {
+  background-color: #12141C !important;
+  border-color: #202430 !important;
+}
+
+/* Inputs, Textareas, & Select fields in dark mode */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #141720 !important;
+  color: #F8FAFC !important;
+  border-color: #222634 !important;
+}
+
+html.dark option {
+  background-color: #141720;
+  color: #F8FAFC;
+}
+
+/* Deep refined borders in dark mode */
+html.dark .border-gray-200,
+html.dark .border-gray-100,
+html.dark .border-gray-150,
+html.dark .border-gray-300,
+html.dark .border-gray-50,
+html.dark .dark\:border-slate-800,
+html.dark .dark\:border-slate-700 {
+  border-color: #1A1D26 !important;
+}
+
+/* Text readability in dark mode */
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700 {
+  color: #F8FAFC !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
+  color: #CBD5E1 !important;
+}
+
+html.dark .text-gray-400 {
+  color: #94A3B8 !important;
+}
+
+/* Deep luxury footer in dark mode */
+html.dark footer {
+  background-color: #050608 !important;
+  border-color: #14161F !important;
+}
+
+footer h4 {
+  color: #FFFFFF !important;
+}
+
+html.dark footer a {
+  color: #94A3B8 !important;
+}
+
+html.dark footer a:hover {
+  color: #FFFFFF !important;
+}
+
+/* 3D Transformation Utilities */
+.perspective-1200 {
+  perspective: 1200px;
+  perspective-origin: 50% 0%;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Leaflet Custom Popup & Marker Styles */
+.leaflet-container {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif !important;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.makan-custom-popup .leaflet-popup-content-wrapper {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e2e8f0;
+}
+
+.dark .makan-custom-popup .leaflet-popup-content-wrapper {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.makan-custom-popup .leaflet-popup-content {
+  margin: 4px;
+  line-height: 1.4;
+}
+
+.makan-custom-popup .leaflet-popup-tip {
+  background: #ffffff;
+}
+
+.dark .makan-custom-popup .leaflet-popup-tip {
+  background: #1e293b;
+}
+
+.makan-custom-price-marker {
+  transition: transform 0.15s ease-out;
+}
+
+.makan-custom-price-marker:hover {
+  z-index: 9999 !important;
+  transform: scale(1.1);
+}
